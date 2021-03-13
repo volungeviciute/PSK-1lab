@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="PSK-1lab:war exploded">
-    <output-path>$PROJECT_DIR$/target/PSK-1lab-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/PT-Pirmas</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -13,9 +13,14 @@
         <element id="directory" name="classes">
           <element id="module-output" name="PSK-1lab" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.h2database:h2:1.4.196" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.3" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-cdi:1.1.1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/PSK-1lab-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/PT-Pirmas/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="PSK-1lab/web/Web" />
     </root>
