@@ -67,9 +67,8 @@
         </dependency>
     </dependencies>
 
-
     <build>
-    <finalName>PT-Pirmas</finalName>
+    <finalName>PSK-1lab</finalName>
     <pluginManagement>
     <plugins>
     <plugin>
