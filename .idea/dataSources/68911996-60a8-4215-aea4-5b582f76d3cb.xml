@@ -275,18 +275,18 @@
     <table id="196" parent="3" name="VIEWS">
       <ObjectId>-18</ObjectId>
     </table>
-    <sequence id="197" parent="4" name="SYSTEM_SEQUENCE_0D9BD0B6_08E3_4D34_AE2F_351B7D92BB69">
-      <ObjectId>9</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="198" parent="4" name="SYSTEM_SEQUENCE_A1C76C62_17D8_4B2F_90AE_154FD196B72B">
-      <ObjectId>13</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="199" parent="4" name="SYSTEM_SEQUENCE_B43432C2_BA0B_4D1C_B313_7B4046A44F9C">
+    <sequence id="197" parent="4" name="SYSTEM_SEQUENCE_35FF13E5_2B4E_4EB7_AECD_4F48A368F27F">
       <ObjectId>4</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="198" parent="4" name="SYSTEM_SEQUENCE_512034E1_05F3_411C_941A_8001E12D8B42">
+      <ObjectId>12</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="199" parent="4" name="SYSTEM_SEQUENCE_99422757_9269_4088_B76F_63ADD3904CE6">
+      <ObjectId>8</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <AutoCreated>1</AutoCreated>
     </sequence>
@@ -294,13 +294,13 @@
       <ObjectId>3</ObjectId>
     </table>
     <table id="201" parent="4" name="STUDENT">
-      <ObjectId>8</ObjectId>
+      <ObjectId>7</ObjectId>
     </table>
     <table id="202" parent="4" name="TEACHER">
-      <ObjectId>12</ObjectId>
+      <ObjectId>11</ObjectId>
     </table>
     <table id="203" parent="4" name="TEACHER_SCHOOL">
-      <ObjectId>27</ObjectId>
+      <ObjectId>15</ObjectId>
     </table>
     <column id="204" parent="164" name="CATALOG_NAME">
       <Position>1</Position>
@@ -1531,7 +1531,7 @@
       <DataType>INTEGER|0s</DataType>
     </column>
     <index id="509" parent="201" name="PRIMARY_KEY_B">
-      <ObjectId>10</ObjectId>
+      <ObjectId>9</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>61</SourceTextLength>
       <ColNames>ID</ColNames>
@@ -1539,7 +1539,7 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="510" parent="201" name="FKS3ICDC3BCDALKH847GEJXHGKN_INDEX_B">
-      <ObjectId>21</ObjectId>
+      <ObjectId>16</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>84</SourceTextLength>
       <ColNames>SCHOOL_ID</ColNames>
@@ -1568,47 +1568,35 @@
       <DataType>VARCHAR(50)|0s</DataType>
     </column>
     <index id="516" parent="202" name="PRIMARY_KEY_D">
-      <ObjectId>14</ObjectId>
+      <ObjectId>13</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>61</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <column id="517" parent="203" name="TEACHER_ID">
+    <column id="517" parent="203" name="TEACHERS_ID">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="518" parent="203" name="SCHOOLLIST_ID">
+    <column id="518" parent="203" name="SCHOOLS_ID">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="519" parent="203" name="TEACHERLIST_ID">
-      <Position>3</Position>
-      <DataType>INTEGER|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="520" parent="203" name="FKJ7IW17JLIDDYMVA1CC0AIPX5J_INDEX_D">
-      <ObjectId>30</ObjectId>
+    <index id="519" parent="203" name="FKKNN0JYFHB0HABMWN1BK34UECC_INDEX_7">
+      <ObjectId>20</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <SourceTextLength>93</SourceTextLength>
+      <ColNames>TEACHERS_ID</ColNames>
+      <AutoCreated>1</AutoCreated>
+    </index>
+    <index id="520" parent="203" name="FK88HMLS0625964EL9L4P8AA4T7_INDEX_7">
+      <ObjectId>18</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>92</SourceTextLength>
-      <ColNames>TEACHER_ID</ColNames>
-      <AutoCreated>1</AutoCreated>
-    </index>
-    <index id="521" parent="203" name="FKISU5WSEER8S77K8SO2YAQ60UC_INDEX_D">
-      <ObjectId>28</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>95</SourceTextLength>
-      <ColNames>SCHOOLLIST_ID</ColNames>
-      <AutoCreated>1</AutoCreated>
-    </index>
-    <index id="522" parent="203" name="FK4X54TAYIA5SAVD19318TWMCEB_INDEX_7">
-      <ObjectId>16</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>96</SourceTextLength>
-      <ColNames>TEACHERLIST_ID</ColNames>
+      <ColNames>SCHOOLS_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
   </database-model>

@@ -37,5 +37,5 @@ public class Teacher implements Serializable {
     private SchoolSubject subject;
 
     @ManyToMany
-    private List<School> schoolList;
+    private List<School> schools;
 }
