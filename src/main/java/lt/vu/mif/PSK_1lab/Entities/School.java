@@ -30,6 +30,6 @@ public class School implements Serializable {
     @OneToMany(mappedBy = "school")
     private List<Student> studentList;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "schoolList")
     private List<Teacher> teacherList;
 }
