@@ -32,6 +32,5 @@ public class Schools {
         return "index?faces-redirect=true";
     }
 
-    private void loadAllSchools(){//this.allSchools = schoolsDAO.loadAll();
-    }
+    private void loadAllSchools(){ this.allSchools = schoolsDAO.loadAll();  }
 }

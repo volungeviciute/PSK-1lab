@@ -10,6 +10,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@NamedQueries(
+        {
+                @NamedQuery(name="School.findAll", query = "select s from School as s")
+        }
+)
 @Table(name = "SCHOOL")
 @Getter @Setter
 public class School implements Serializable {

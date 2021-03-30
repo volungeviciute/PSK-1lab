@@ -12,7 +12,7 @@ public class SchoolsDAO {
     @Inject
    private EntityManager em;
 
-    public List<School> loadAll() { return null;}
+    public List<School> loadAll() { return em.createNamedQuery("School.findAll", School.class).getResultList();}
 
     public void persist(School school){
         this.em.persist(school);

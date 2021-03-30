@@ -6,9 +6,18 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head/>
 <h:body>
-    <h2>Project</h2>
+    <h2>Schools</h2>
+    <ol>
+        <ui:repeat value="#{schools.allSchools}" var="school">
+            <li>#{school.name}</li>
+        </ui:repeat>
+    </ol>
     <h:form>
         <h:inputText value="#{schools.schoolToCreate.name}" required="true" />
+        <br/>
+        <h:inputText value="#{schools.schoolToCreate.address}" required="true" />
+        <br/>
+        <h:commandButton value="Add new school" action="#{schools.createSchool}"/>
     </h:form>
 </h:body>
 </html>
