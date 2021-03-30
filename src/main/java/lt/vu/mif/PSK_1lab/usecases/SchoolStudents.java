@@ -42,8 +42,6 @@ public class SchoolStudents implements Serializable {
     @Transactional
     public String createStudent(){
         studentToCreate.setSchool(this.school);
-        studentToCreate.setAddress("TEST");
-        studentToCreate.setSurname("TEST");
         studentToCreate.setYear(SchoolYear.FIRST);
         studentsDAO.persist(studentToCreate);
         System.out.println("students?faces-redirect=true&schoolId="+this.school.getId());
