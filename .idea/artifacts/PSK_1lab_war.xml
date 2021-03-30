@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="PT-Pirmas.war">
+    <root id="archive" name="PSK-1lab.war">
       <element id="artifact" artifact-name="PSK-1lab:war exploded" />
     </root>
   </artifact>
