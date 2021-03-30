@@ -16,9 +16,10 @@
     </ol>
     <h:form>
         <h:inputText a:placeholder="name" value="#{schoolStudents.studentToCreate.name}" required="true" />
-        <h:commandButton value="Add student to the school" action="#{schoolStudents.createStudent}" >
+        <h:commandButton value="Add student" action="#{schoolStudents.createStudent}" >
             <f:param name="schoolId" value="#{schoolStudents.school.id}" />
         </h:commandButton>
     </h:form>
+    <h:link outcome="index" value="Back to index"/>
 </h:body>
 </html>
