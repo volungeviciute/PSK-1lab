@@ -4,8 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head/>
+<h:body>
+    <h2>School name: #{schoolStudents.school.name}</h2>
+    <ol>
+        <ui:repeat value="#{schoolStudents.school.studentList}" var="student">
+            <li>#{student.name}</li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText a:placeholder="name" value="#{schoolStudents.studentToCreate.name}" required="true" />
+        <h:commandButton value="Add student to the school" action="#{schoolStudents.createStudent}" >
+            <f:param name="schoolId" value="#{schoolStudents.school.id}" />
+        </h:commandButton>
+    </h:form>
+</h:body>
 </html>

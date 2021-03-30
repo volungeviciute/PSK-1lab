@@ -18,7 +18,7 @@ public class SchoolsDAO {
         this.em.persist(school);
     }
 
-    public School findOne(Integer id){ return null;}
+    public School findOne(Integer id){ return this.em.find(School.class, id);}
 
     public void setEm(EntityManager em){this.em = em;}
 }

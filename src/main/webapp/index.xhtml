@@ -9,7 +9,7 @@
     <h2>Schools</h2>
     <ol>
         <ui:repeat value="#{schools.allSchools}" var="school">
-            <li>#{school.name}</li>
+            <li><h:link value="#{school.name}" outcome="students?schoolId=#{school.id}"/></li>
         </ui:repeat>
     </ol>
     <h:form>
