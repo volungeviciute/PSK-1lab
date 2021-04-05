@@ -81,7 +81,7 @@
         <artifactId>mybatis-generator-maven-plugin</artifactId>
         <version>1.4.0</version>
         <configuration>
-            <contexts>PlayersDB</contexts>
+            <contexts>SchoolDB</contexts>
             <verbose>true</verbose>
         </configuration>
         <executions>

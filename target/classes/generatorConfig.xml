@@ -15,12 +15,11 @@
         <sqlMapGenerator targetPackage="lt.vu.mif.PSK_1lab.mybatis.xml" targetProject="MAVEN" />
         <javaClientGenerator type="XMLMAPPER" targetPackage="lt.vu.mif.PSK_1lab.mybatis.dao" targetProject="MAVEN" />
 
-
         <table schema="public" tableName="school">
-            <generatedKey column="id" identity="true" sqlStatement="JDBC" />
+            <generatedKey column="id" identity="true" sqlStatement="JDBC"/>
         </table>
         <table schema="public" tableName="student">
-            <generatedKey column="id" identity="true" sqlStatement="JDBC" />
+            <generatedKey column="id" identity="true" sqlStatement="JDBC"/>
         </table>
         <table schema="public" tableName="teacher">
             <generatedKey column="id" identity="true" sqlStatement="JDBC"/>
