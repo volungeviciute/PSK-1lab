@@ -6,7 +6,6 @@
     <typeAliases>
         <typeAlias type="lt.vu.mif.PSK_1lab.mybatis.model.School" alias="School"/>
         <typeAlias type="lt.vu.mif.PSK_1lab.mybatis.model.Student" alias="Student"/>
-        <typeAlias type="lt.vu.mif.PSK_1lab.mybatis.model.Teacher" alias="Teacher"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -19,6 +18,5 @@
     <mappers>
         <mapper resource="mybatis.xml/SchoolMapper.xml"/>
         <mapper resource="mybatis.xml/StudentMapper.xml"/>
-        <mapper resource="mybatis.xml/TeacherMapper.xml"/>
     </mappers>
 </configuration>

@@ -5,7 +5,13 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+<h:head/>
+<h:body>
+    <h2>Schools: </h2>
+    <ol>
+        <ui:repeat value="#{schoolsMyBatis.allSchools}" var="school">
+            <li>#{school.name}</li>
+        </ui:repeat>
+    </ol>
+</h:body>
 </html>
