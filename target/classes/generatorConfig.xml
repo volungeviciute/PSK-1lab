@@ -21,8 +21,5 @@
         <table schema="public" tableName="student">
             <generatedKey column="id" identity="true" sqlStatement="JDBC"/>
         </table>
-        <table schema="public" tableName="teacher">
-            <generatedKey column="id" identity="true" sqlStatement="JDBC"/>
-        </table>
     </context>
 </generatorConfiguration>
