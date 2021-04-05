@@ -8,7 +8,7 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 <h:head/>
 <h:body>
-    <h2>School name: #{schoolStudents.school.name}</h2>
+    <h2>School: #{schoolStudents.school.name}</h2>
     <ol>
         <ui:repeat value="#{schoolStudents.school.studentList}" var="student">
             <li>#{student.name}</li>

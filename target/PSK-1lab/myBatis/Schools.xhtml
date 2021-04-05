@@ -10,8 +10,15 @@
     <h2>Schools: </h2>
     <ol>
         <ui:repeat value="#{schoolsMyBatis.allSchools}" var="school">
-            <li>#{school.name}</li>
+            <li><h:link value="#{school.name}" outcome="Students?schoolId=#{school.id}"/></li>
         </ui:repeat>
     </ol>
+    <h:form>
+        <h:inputText value="#{schoolsMyBatis.schoolToCreate.name}" required="true"/>
+        <h:inputText value="#{schoolsMyBatis.schoolToCreate.address}" required="true"/>
+        <h:commandButton value="Add new school" action="#{schoolsMyBatis.createSchool}"/>
+    </h:form>
+    <br/>
+    <h:link outcome="/index" value="Back to index"/>
 </h:body>
 </html>
