@@ -9,6 +9,7 @@
 <h:head/>
 <h:body>
     <h2>School: #{schoolStudents.school.name}</h2>
+    <h3>Students:</h3>
     <ol>
         <ui:repeat value="#{schoolStudents.school.studentList}" var="student">
             <li>#{student.name}</li>
@@ -20,6 +21,20 @@
         <h:inputText a:placeholder="address" value="#{schoolStudents.studentToCreate.address}" required="true"/>
         <h:commandButton value="Add student" action="#{schoolStudents.createStudent}" >
             <f:param name="schoolId" value="#{schoolStudents.school.id}" />
+        </h:commandButton>
+    </h:form>
+    <h3>Teachers:</h3>
+    <ol>
+        <ui:repeat value="#{teachersSchools.school.teachers}" var="teacher">
+            <li>#{teacher.name}</li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText a:placeholder="name" value="#{teachersSchools.teacherToCreate.name}" required="true"/>
+        <h:inputText a:placeholder="surname" value="#{teachersSchools.teacherToCreate.surname}" required="true"/>
+        <h:inputText a:placeholder="address" value="#{teachersSchools.teacherToCreate.address}" required="true"/>
+        <h:commandButton value="Add teacher" action="#{teachersSchools.createTeacher}" >
+            <f:param name="schoolId" value="#{teachersSchools.school.id}" />
         </h:commandButton>
     </h:form>
     <h:link outcome="index" value="Back to index"/>
