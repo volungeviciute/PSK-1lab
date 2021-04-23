@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -37,4 +38,17 @@ public class School implements Serializable {
 
     @ManyToMany(mappedBy = "schools")
     private List<Teacher> teachers;
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        School school = (School) o;
+        return Objects.equals(id, school.id) &&
+                Objects.equals(name, school.name);
+    }
+
+    public int hashCode(){
+        return Objects.hash(id, name);
+    }
 }
