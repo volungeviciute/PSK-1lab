@@ -26,7 +26,7 @@
     <h3>Teachers:</h3>
     <ol>
         <ui:repeat value="#{teachersSchools.school.teachers}" var="teacher">
-            <li>#{teacher.name}</li>
+            <li><h:link value="#{teacher.name}" outcome="teacher?teacherId=#{teacher.id}"/></li>
         </ui:repeat>
     </ol>
     <h:form>
