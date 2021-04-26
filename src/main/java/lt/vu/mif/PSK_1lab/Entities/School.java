@@ -47,7 +47,7 @@ public class School implements Serializable {
         return Objects.equals(id, school.id) &&
                 Objects.equals(name, school.name);
     }
-
+    @Override
     public int hashCode(){
         return Objects.hash(id, name);
     }
