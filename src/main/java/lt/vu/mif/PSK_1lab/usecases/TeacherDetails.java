@@ -15,8 +15,10 @@ import javax.inject.Named;
 import javax.persistence.OptimisticLockException;
 import javax.transaction.Transactional;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @ViewScoped
 @Named
@@ -49,6 +51,14 @@ public class TeacherDetails implements Serializable {
             teachersDAO.update(teacher);
         }
         return "teacher?faces-redirect=true&teacherId="+ teacher.getId();
+    }
+
+    public List<School> getAvailableSchools(){
+        List<School> availableSchools = new ArrayList<>();
+        List<School> allSchools = schoolsDAO.loadAll();
+        List<School> schools = teacher.getSchools();
+
+        return allSchools.stream().filter(s -> !schools.contains(s)).collect(Collectors.toList());
     }
 
 }

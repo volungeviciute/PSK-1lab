@@ -16,7 +16,7 @@
     </ol>
     <h:form>
         <h:selectOneMenu value = "#{teacherDetails.schoolToAssignId}">
-            <f:selectItems value="#{schools.allSchools}" var="school" itemValue="#{school.id}" itemLabel="#{school.name}" />
+            <f:selectItems value="#{teacherDetails.availableSchools}" var="school" itemValue="#{school.id}" itemLabel="#{school.name}" />
         </h:selectOneMenu>
         <h:commandButton value="Add school" action="#{teacherDetails.assignToNewSchool}">
             <f:param name="teacherId" value="#{teacherDetails.teacher.id}"/>
