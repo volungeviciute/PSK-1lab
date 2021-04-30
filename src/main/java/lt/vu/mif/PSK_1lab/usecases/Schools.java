@@ -6,6 +6,7 @@ import lombok.Getter;
 
 import lt.vu.mif.PSK_1lab.Alternative.INameChanger;
 import lt.vu.mif.PSK_1lab.Entities.School;
+import lt.vu.mif.PSK_1lab.Interceptor.InterceptorMethod;
 import lt.vu.mif.PSK_1lab.persistence.SchoolsDAO;
 
 import javax.annotation.PostConstruct;
@@ -30,6 +31,7 @@ public class Schools {
     @PostConstruct
     public void init(){loadAllSchools();}
 
+    @InterceptorMethod
     @Transactional
     public String createSchool(){
         this.nameChangerComponent.ChangeName(schoolToCreate);

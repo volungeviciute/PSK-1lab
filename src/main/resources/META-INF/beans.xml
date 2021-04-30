@@ -7,4 +7,8 @@
     <alternatives>
         <class>lt.vu.mif.PSK_1lab.Alternative.NameAllCaps</class>
     </alternatives>
+
+    <interceptors>
+        <class>lt.vu.mif.PSK_1lab.Interceptor.MethodInterceptor</class>
+    </interceptors>
 </beans>
