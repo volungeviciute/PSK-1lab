@@ -4,6 +4,7 @@ import java.util.List;
 import lombok.Setter;
 import lombok.Getter;
 
+import lt.vu.mif.PSK_1lab.Alternative.INameChanger;
 import lt.vu.mif.PSK_1lab.Entities.School;
 import lt.vu.mif.PSK_1lab.persistence.SchoolsDAO;
 
@@ -14,6 +15,9 @@ import javax.transaction.Transactional;
 
 @Model
 public class Schools {
+    @Inject
+    private INameChanger nameChangerComponent;
+
     @Inject
     private SchoolsDAO schoolsDAO;
 
@@ -28,6 +32,7 @@ public class Schools {
 
     @Transactional
     public String createSchool(){
+        this.nameChangerComponent.ChangeName(schoolToCreate);
         this.schoolsDAO.persist(schoolToCreate);
         return "index?faces-redirect=true";
     }
