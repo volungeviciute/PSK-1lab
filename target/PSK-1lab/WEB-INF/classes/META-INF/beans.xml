@@ -11,7 +11,7 @@
     <decorators>
         <class>lt.vu.mif.PSK_1lab.Decorator.NameChangerDecorator</class>
     </decorators>
-    
+
     <interceptors>
         <class>lt.vu.mif.PSK_1lab.Interceptor.MethodInterceptor</class>
     </interceptors>

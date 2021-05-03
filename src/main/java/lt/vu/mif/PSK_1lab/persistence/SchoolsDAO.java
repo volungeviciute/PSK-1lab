@@ -20,5 +20,7 @@ public class SchoolsDAO {
 
     public School findOne(Integer id){ return this.em.find(School.class, id);}
 
+    public School update(School school){ return em.merge(school);}
+
     public void setEm(EntityManager em){this.em = em;}
 }
