@@ -7,7 +7,6 @@ import javax.decorator.Decorator;
 import javax.decorator.Delegate;
 import javax.enterprise.inject.Any;
 import javax.inject.Inject;
-import java.util.Locale;
 
 @Decorator
 public abstract class NameChangerDecorator implements INameChanger {
@@ -16,12 +15,13 @@ public abstract class NameChangerDecorator implements INameChanger {
 
     public void ChangeName(School school) {
         nameChanger.ChangeName(school);
-        school.setName(school.getName().toUpperCase(Locale.ROOT));
+        String fixedName = school.getName().replaceAll("[^A-Za-z]", "");
+        school.setName(fixedName);
     }
 
     public void ChangeName(lt.vu.mif.PSK_1lab.mybatis.model.School school) {
         nameChanger.ChangeName(school);
-        school.setName(school.getName().toUpperCase(Locale.ROOT));
+        String fixedName = school.getName().replaceAll("[^A-Za-z]", "");
+        school.setName(fixedName);
     }
-
 }
