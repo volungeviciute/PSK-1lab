@@ -37,6 +37,12 @@
             <f:param name="schoolId" value="#{teachersSchools.school.id}" />
         </h:commandButton>
     </h:form>
+    <h:form>
+        <h:outputText value="#{dateExtractor.dateExtractorStatus}"/>
+        <h:commandButton value="Get Date?" disabled="#{dateExtractor.dateExtractorRunning}" action="#{dateExtractor.generateDate()}">
+            <f:param name="schoolId" value="#{schoolStudents.school.id}"/>
+        </h:commandButton>
+    </h:form>
     <h:link outcome="index" value="Back to index"/>
 </h:body>
 </html>
