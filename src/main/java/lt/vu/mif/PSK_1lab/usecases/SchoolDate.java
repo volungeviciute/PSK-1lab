@@ -1,5 +1,5 @@
 package lt.vu.mif.PSK_1lab.usecases;
-import lt.vu.mif.PSK_1lab.Services.DateExtractorService;
+import lt.vu.mif.PSK_1lab.Services.DateService;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -12,9 +12,9 @@ import java.util.concurrent.ExecutionException;
 
 @SessionScoped
 @Named
-public class DateExtractor implements Serializable {
+public class SchoolDate implements Serializable {
     @Inject
-    DateExtractorService dateExtractorService;
+    DateService dateExtractorService;
 
     private CompletableFuture<String> dateGetterTask = null;
 
