@@ -8,4 +8,6 @@ public class SchoolDTO {
     private Integer id;
     @Getter @Setter
     private String name;
+    @Getter @Setter
+    private String address;
 }

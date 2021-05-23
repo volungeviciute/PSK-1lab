@@ -31,6 +31,7 @@ public class SchoolController {
         List<SchoolDTO> schoolsDTO = schools.stream().map(school -> {
             SchoolDTO schoolDTO = new SchoolDTO();
             schoolDTO.setName(school.getName());
+            schoolDTO.setAddress(school.getAddress());
             schoolDTO.setId(school.getId());
             return schoolDTO;
         }).collect(Collectors.toList());
@@ -50,6 +51,7 @@ public class SchoolController {
         SchoolDTO schoolDTO = new SchoolDTO();
         schoolDTO.setName(school.getName());
         schoolDTO.setId(school.getId());
+        schoolDTO.setAddress(school.getAddress());
 
         return Response.ok(schoolDTO).build();
     }
@@ -65,6 +67,7 @@ public class SchoolController {
                 return Response.status(Response.Status.NOT_FOUND).build();
             }
             existingSchool.setName(schoolData.getName());
+            existingSchool.setAddress(schoolData.getAddress());
             schoolsDAO.update(existingSchool);
             return Response.ok().build();
         } catch(OptimisticLockException e){
@@ -79,6 +82,7 @@ public class SchoolController {
         try{
             School schoolToCreate = new School();
             schoolToCreate.setName(schoolDTO.getName());
+            schoolToCreate.setAddress(schoolDTO.getAddress());
             schoolsDAO.persist(schoolToCreate);
 
             return Response.ok().build();
