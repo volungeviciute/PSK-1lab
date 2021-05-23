@@ -9,6 +9,12 @@
 <h:head/>
 <h:body>
     <h2>School: #{schoolStudents.school.name}</h2>
+    <h:form>
+        <h:inputText a:placeholder="name" value="#{schoolStudents.school.name}" required="true"/>
+        <h:commandButton value="Update school" action="#{schoolStudents.updateSchool}">
+            <f:param name="schoolId" value="#{teachersSchools.school.id}" />
+        </h:commandButton>
+    </h:form>
     <h3>Students:</h3>
     <ol>
         <ui:repeat value="#{schoolStudents.school.studentList}" var="student">
