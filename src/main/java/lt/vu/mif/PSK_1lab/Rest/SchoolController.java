@@ -72,7 +72,18 @@ public class SchoolController {
         }
     }
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Transactional
+    public Response create(SchoolDTO schoolDTO){
+        try{
+            School schoolToCreate = new School();
+            schoolToCreate.setName(schoolDTO.getName());
+            schoolsDAO.persist(schoolToCreate);
 
-
-
+            return Response.ok().build();
+        }catch (OptimisticLockException e){
+            return Response.status(Response.Status.CONFLICT).build();
+        }
+    }
 }
