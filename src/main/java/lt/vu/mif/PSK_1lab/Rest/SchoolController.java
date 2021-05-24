@@ -69,9 +69,16 @@ public class SchoolController {
             existingSchool.setName(schoolData.getName());
             existingSchool.setAddress(schoolData.getAddress());
             schoolsDAO.update(existingSchool);
+
+            Thread.sleep(7000);
+            schoolsDAO.flush();
+
             return Response.ok().build();
         } catch(OptimisticLockException e){
+            System.out.println("OPTIMISTIC LOCK EXCEPTION");
             return Response.status(Response.Status.CONFLICT).build();
+        } catch (InterruptedException e){
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
 

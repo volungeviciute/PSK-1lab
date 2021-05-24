@@ -51,4 +51,7 @@ public class School implements Serializable {
     public int hashCode(){
         return Objects.hash(id, name);
     }
+
+    @Version
+    private Integer version;
 }

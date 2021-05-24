@@ -23,4 +23,6 @@ public class SchoolsDAO {
     public School update(School school){ return em.merge(school);}
 
     public void setEm(EntityManager em){this.em = em;}
+
+    public void flush(){ em.flush(); }
 }
